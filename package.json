@@ -1,6 +1,6 @@
 {
     "name": "create-template-impossible98",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "private": false,
     "bin": {
         "create-template-impossible98": "./src/main.js"
