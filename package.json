@@ -1,25 +1,38 @@
 {
-    "name": "create-template-impossible98",
-    "version": "0.0.5",
-    "private": false,
-    "bin": {
-        "create-template-impossible98": "./src/main.js"
-    },
-    "scripts": {
-        "dev": "node ./src/main.js",
-        "fmt": "dprint fmt",
-        "prepare": "husky install"
-    },
-    "dependencies": {
-        "fs-extra": "^10.1.0",
-        "kolorist": "^1.5.1",
-        "prompts": "^2.4.2"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.0.0",
-        "@commitlint/config-conventional": "^17.0.0",
-        "dprint": "^0.30.0",
-        "husky": "^8.0.0",
-        "typescript": "^4.7.4"
-    }
+  "name": "create-template-impossible98",
+  "version": "0.0.6",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node ./src/index.ts",
+    "prepublishOnly": "tsc",
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "kolorist": "^1.0.0",
+    "minimist": "^1.2.7",
+    "prompts": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.0",
+    "@types/minimist": "^1.0.0",
+    "@types/node": "^18.0.0",
+    "@types/prompts": "^2.0.0",
+    "cross-spawn": "^7.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "bin": {
+    "create-template-impossible98": "./index.js",
+    "cti": "./index.js"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "files": [
+    "index.js",
+    "template-*",
+    "dist"
+  ],
+  "type": "module"
 }

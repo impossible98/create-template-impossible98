@@ -9,12 +9,18 @@ build:
 	@echo -e "\033[32mBuild finished.\033[0m"
 # Local development
 dev:
-	$(PNPM) run dev
+	$(PNPM) run start
 # Install dependencies
 install:
 	@echo -e "\033[32mInstalling dependencies...\033[0m"
 	$(PNPM) install
 	@echo -e "\033[32mDependencies installed.\033[0m"
-# Start the application
-start: build
-	$(PNPM) run start
+### Git ###
+# Git pull
+pull:
+	git pull
+# Git push
+push:
+	git add --all
+	git commit -m "feat: init project"
+	git push
